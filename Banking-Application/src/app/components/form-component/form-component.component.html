@@ -1,0 +1,46 @@
+<div class="full-container">
+<div class="grid-container">
+    <div class="grid-item" *ngFor="let container of containers; let i = index">
+      <!-- Your container content here -->
+      <form [formGroup]="formForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="currency">Enter the Currency  </label>
+          <select class="form-control" id="currency" formControlName="currency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            <option value="INR">INR</option>
+          </select>
+        </div>
+      
+        <div class="form-group">
+          <label for="amount">Enter the Amount  </label>
+          <input type="number" class="form-control" id="amount" formControlName="amount">
+        </div>
+      
+        <div class="form-group">
+          <label for="interest">Enter the Interest Earned  </label>
+          <input type="number" class="form-control" id="interest" formControlName="interest">
+        </div>
+      
+        <div class="form-group">
+          <label for="accountType">Type of Account  </label>
+          <select class="form-control" id="accountType" formControlName="accountType">
+            <option value="savings">Savings</option>
+            <option value="checking">Checking</option>
+            <option value="deposit">Deposit</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+    
+        <div class="form-group">
+            <label for="period">Enter Number of Months  </label>
+            <input type="number" class="form-control" id="months" formControlName="months">
+    
+      </div>
+        <button type="submit" class="btn btn-primary">Submit </button>
+      </form>
+    </div>
+  </div>
+</div>
